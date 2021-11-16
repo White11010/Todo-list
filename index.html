@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>To do list</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header__wrapper">
+			<p class="header__date">November 16, 2021</p>
+			<p class="header__total">5 incomplete, 5 complete</p>
+		</div>
+	</header>
+	<main class="main">
+		<section class="input">
+			<div class="wrapper">
+				<form action="" class="input__form">
+					<input type="text" class="input__field" id="taskText">
+					<button type="submit" class="input__button btn" id="addBtn">Add</button>
+				</form>
+			</div>
+		</section>
+		<section class="list">
+			<div class="wrapper">
+				<ul id="taskList">
+					
+				</ul>
+				<div class="list__total"><p></p></div>
+			</div>
+		</section>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+</html>

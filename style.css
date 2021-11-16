@@ -1,0 +1,67 @@
+@import url('./fonts/futura/fonts.css'); 
+@import url('./reset.css');
+
+html, body { 
+	height:100%;
+	overflow: auto;
+}
+
+.wrapper{
+	padding: 0 1em;
+}
+
+/*Header styles start*/
+.header{
+	font-family: 'FuturaMediumC';
+}
+.header__wrapper{
+	padding: 1em 1em;
+}
+.header__date{
+	font-size: 1.5rem;
+	color: black;
+	margin-bottom: .25em;
+	margin-top: 0;
+}
+.header__total{
+	font-size: 1rem;
+	color: rgb(70, 70, 70);
+	margin: 0;
+}
+/*Header styles end*/
+
+/*Input section styles start*/
+.input__form{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-family: 'FuturaMediumC';
+}
+.input__field {
+	height: 2rem;
+	border: none;
+	border-bottom: 1px solid black;
+	flex: 1;
+	outline:none;
+	margin-right: 1.5em;
+
+}
+.input__button{
+	width: min(max(15vw, 50px), 100px);
+	flex: none;
+	height: 2rem;
+}
+/*Input section styles end*/
+
+@media screen and (min-width: 576px) {
+	html {
+		font-size: 1.1rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 1.2rem;
+	}
+}
+
