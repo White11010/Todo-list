@@ -9,51 +9,7 @@ html, body {
 .wrapper{
 	padding: 0 1em;
 }
-.section-title {
-	font-family: 'FuturaMediumC';
-	color: rgb(70, 70, 70);
-	font-weight: normal;
-}
-.list {
 
-}
-.list__item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	box-sizing: border-box;
-	padding: 1em 0;
-	border-bottom: 1px solid rgb(220,220,220);
-}
-.item__body {
-	display: flex;
-	align-items: center;
-}
-.item__check {
-	margin-right: 1em;
-}
-.item__title {
-	font-family: 'FuturaBookC';
-	font-size: 1.2rem;
-	color: black;
-	flex: 1;
-}
-.item__buttons {
-	flex: none;
-	display: flex;
-	align-items: center;
-
-}	
-.item__button {
-	width: 1.5rem;
-	height: 1.5rem;
-	cursor: pointer;
-	margin-left: .5em;
-}	
-.completed {
-	text-decoration: line-through;
-	color: rgb(150, 150, 150);
-}
 
 /*Header styles start*/
 .header{
@@ -74,6 +30,7 @@ html, body {
 	margin: 0;
 }
 /*Header styles end*/
+
 
 /*Input section styles start*/
 .input {
@@ -104,17 +61,66 @@ html, body {
 
 /*Incomplete section styles start*/
 .incomplete {
-	
 	margin-bottom: 1rem;
 }
 /*Incomplete section styles start*/
 
 /*Complete section styles start*/
 .complete {
-	
 	margin-bottom: 1rem;
 }
+.completed {
+	text-decoration: line-through;
+	color: rgb(150, 150, 150);
+}
 /*Complete section styles start*/
+
+
+
+.section-title {
+	font-family: 'FuturaMediumC';
+	color: rgb(70, 70, 70);
+	font-weight: normal;
+}
+
+
+.list__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 1em 0;
+	border-bottom: 1px solid rgb(220,220,220);
+}
+
+/*List item styles start*/
+.item__body {
+	display: flex;
+	align-items: center;
+}
+.item__check {
+	margin-right: 1em;
+}
+.item__title {
+	font-family: 'FuturaBookC';
+	font-size: 1.2rem;
+	color: black;
+	flex: 1;
+}
+.item__buttons {
+	flex: none;
+	display: flex;
+	align-items: center;
+
+}	
+.item__button {
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+	margin-left: .5em;
+}	
+/*List item styles start*/
+
 
 /*Media queries*/
 @media screen and (min-width: 576px) {
