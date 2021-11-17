@@ -17,8 +17,8 @@ if (mysqli_num_rows($result) > 0) {
 			<p class="item__title"><?php echo $row['title']?></p>
 		</div>
 		<div class="item__buttons">
-			<img src="./images/svg/edit-icon.svg" alt="edit" class="item__button" id="editBtn" data-id="<?php echo $row['id']; ?>">
-			<img src="./images/svg/delete-icon.svg" alt="delete" class="item__button" id="removeBtn" data-id="<?php echo $row['id']; ?>">
+			<img src="./images/edit-icon.svg" alt="edit" class="item__button" id="editBtn" data-id="<?php echo $row['id']; ?>">
+			<img src="./images/delete-icon.svg" alt="delete" class="item__button" id="removeBtn" data-id="<?php echo $row['id']; ?>">
 		</div>
 	</li>
 
