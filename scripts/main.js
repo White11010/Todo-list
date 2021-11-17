@@ -29,17 +29,34 @@ $(document).ready(() => {
 
 
 //Add new task (send to server)
-$("#addBtn").on("click", (e) => {
+$("#addBtn").on("click", function (e) {
 	e.preventDefault();
 
 	let task = $("#taskText").val();
-	if (task != "") {
+
+	if (task != "" && $(this).text() == "Add") {
+		console.log("add");
 		$.ajax({
 			url: 'add-task.php',
 			type: 'post',
 			data: {task: task},
 			success: function (data) {
 				loadTasks("get-incomplete-tasks.php", "#incompletedList");
+				$("#taskText").val('');
+				if (data == 0) {
+					alert("Error...");
+				}
+			}
+		});
+	} else if (task != "" && $(this).text() == "Edit") {
+		$.ajax({
+			url: 'edit-task.php',
+			type: 'post',
+			data: {task: task, id: $("#addBtn").data('id')},
+			success: function (data) {
+				$("#addBtn").text("Add");
+				loadTasks("get-incomplete-tasks.php", "#incompletedList");
+				loadTasks("get-complete-tasks.php", "#completedList");
 				$("#taskText").val('');
 				if (data == 0) {
 					alert("Error...");
@@ -68,13 +85,26 @@ $(document).on("click", "#removeBtn", function(e) {
 	});
 });
 
+//Edit task
+$(document).on("click", "#editBtn", function(e) {
+	e.preventDefault();
+
+	//Find task text element in this task item
+	let button = $("#addBtn");
+	let id = $(this).data('id');
+	let taskTitle = $(this).closest(' .list__item').find(' .item__title');
+	//Set its text value to input field
+	$("#taskText").val(taskTitle.text());
+	button.text("Edit");
+	button.data("id", id);
+
+});
+
 //Complete task
 $(document).on("change", "#checkTask", function(e) {
 	e.preventDefault();
 
 	let id = $(this).data('id');
-	console.log(id);
-
 	
 	$.ajax({
 		url: 'complete-task.php',
