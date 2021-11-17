@@ -50,6 +50,10 @@ html, body {
 	cursor: pointer;
 	margin-left: .5em;
 }	
+.completed {
+	text-decoration: line-through;
+	color: rgb(150, 150, 150);
+}
 
 /*Header styles start*/
 .header{
@@ -79,7 +83,7 @@ html, body {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	font-family: 'FuturaMediumC';
+	font-family: 'FuturaBookC';
 }
 .input__field {
 	height: 2rem;

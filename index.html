@@ -9,8 +9,8 @@
 <body>
 	<header class="header">
 		<div class="header__wrapper">
-			<p class="header__date">November 16, 2021</p>
-			<p class="header__total">5 incomplete, 5 complete</p>
+			<p class="header__date" id="date"></p>
+			<p class="header__total"></span><span id="totalIncompleted"></span><span id="totalCompleted"></p>
 		</div>
 	</header>
 	<main class="main">
@@ -25,19 +25,7 @@
 		<section class="incomplete">
 			<div class="wrapper">
 				<h3 class="incomplete__title section-title">Incomplete</h3>
-				<ul class="incomplete__list list" id="taskList">
-					<li class="list__item item">
-						<input class="item__check" type="checkbox">
-						<p class="item__title">task 1</p>
-							<img src="./images/svg/edit-icon.svg" alt="edit" class="item__button">
-							<img src="./images/svg/delete-icon.svg" alt="delete" class="item__button">
-					</li>
-					<li class="list__item item">
-						<input class="item__check" type="checkbox">
-						<p class="item__title">task 1</p>
-							<img src="./images/svg/edit-icon.svg" alt="edit" class="item__button">
-							<img src="./images/svg/delete-icon.svg" alt="delete" class="item__button">
-					</li>
+				<ul class="incomplete__list list" id="incompletedList">
 				</ul>
 				<div class="list__total"><p></p></div>
 			</div>
@@ -45,27 +33,7 @@
 		<section class="complete">
 			<div class="wrapper">
 				<h3 class="complete__title section-title">Complete</h3>
-				<ul class="incomplete__list list" id="taskList">
-					<li class="list__item item">
-						<div class="item__body">
-							<input class="item__check" type="checkbox">
-							<p class="item__title">task 1 asldfijkb gasdlb sadgl bsadlg sald gsldg bsaldg</p>
-						</div>
-						<div class="item__buttons">
-							<img src="./images/svg/edit-icon.svg" alt="edit" class="item__button">
-							<img src="./images/svg/delete-icon.svg" alt="delete" class="item__button">
-						</div>
-					</li>
-					<li class="list__item item">
-						<div class="item__body">
-							<input class="item__check" type="checkbox">
-							<p class="item__title">task 1</p>
-						</div>
-						<div class="item__buttons">
-							<img src="./images/svg/edit-icon.svg" alt="edit" class="item__button">
-							<img src="./images/svg/delete-icon.svg" alt="delete" class="item__button">
-						</div>
-					</li>
+				<ul class="incomplete__list list" id="completedList">
 				</ul>
 				<div class="list__total"><p></p></div>
 			</div>
