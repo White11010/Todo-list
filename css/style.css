@@ -77,6 +77,7 @@ html, body {
 
 /*Input section styles start*/
 .input {
+	width: 100%;
 	margin-bottom: 1rem;
 }
 .input__form{
@@ -103,10 +104,17 @@ html, body {
 
 /*Incomplete section styles start*/
 .incomplete {
+	
 	margin-bottom: 1rem;
 }
-
 /*Incomplete section styles start*/
+
+/*Complete section styles start*/
+.complete {
+	
+	margin-bottom: 1rem;
+}
+/*Complete section styles start*/
 
 /*Media queries*/
 @media screen and (min-width: 576px) {
@@ -121,3 +129,37 @@ html, body {
 	}
 }
 
+@media screen and (min-width: 992px) {
+	html {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 1.4rem;
+	}
+}
+@media screen and (min-width: 1440px) {
+	html {
+		font-size: 1.4rem;
+	}
+	main {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.complete, .incomplete {
+		width: 50%;
+	}
+	.input__form {
+		width: 50%;
+		padding-right: 1em
+	}
+}
+@media screen and (min-width: 1920px) {
+	html {
+		font-size: 1.5rem;
+	}
+
+}

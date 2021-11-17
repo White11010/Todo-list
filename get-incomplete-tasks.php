@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
 <?php
 	}
 } else {
-	echo "<li>No records</li>";
+	echo '<li class="list__item empty"><p class="item__title">No tasks...</p></li>';
 }
 
 ?>

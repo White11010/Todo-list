@@ -15,8 +15,8 @@ function loadTasks(url, listId) {
 		success: function (data) {
 			$(listId).html(data);
 			//Get and fill total number of completed and incompleted tasks
-			$("#totalIncompleted").html($("#incompletedList .list__item").length + ' incomplete, ');
-			$("#totalCompleted").html($("#completedList .list__item").length + ' completed.');
+			$("#totalIncompleted").html($("#incompletedList .list__item").length - $("#incompletedList .empty").length + ' incomplete, ');
+			$("#totalCompleted").html($("#completedList .list__item").length - $("#completedList .empty").length  + ' completed.');
 		}
 	});
 }
@@ -35,7 +35,6 @@ $("#addBtn").on("click", function (e) {
 	let task = $("#taskText").val();
 
 	if (task != "" && $(this).text() == "Add") {
-		console.log("add");
 		$.ajax({
 			url: 'add-task.php',
 			type: 'post',
@@ -97,6 +96,8 @@ $(document).on("click", "#editBtn", function(e) {
 	$("#taskText").val(taskTitle.text());
 	button.text("Edit");
 	button.data("id", id);
+	$("#taskText").focus();
+
 
 });
 
