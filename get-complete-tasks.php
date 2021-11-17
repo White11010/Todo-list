@@ -13,7 +13,7 @@ if (mysqli_num_rows($result) > 0) {
 
 	<li class="list__item item">
 		<div class="item__body">
-			<input class="item__check" type="checkbox">
+			<input class="item__check" type="checkbox" id="checkTask" data-id="<?php echo $row['id']; ?>">
 			<p class="item__title completed"><?php echo $row['title']; ?></p>
 		</div>
 		<div class="item__buttons">
